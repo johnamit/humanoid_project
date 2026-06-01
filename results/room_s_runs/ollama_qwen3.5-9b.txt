@@ -3,7 +3,7 @@
 export PROVIDER=ollama
 export OLLAMA_MODEL=qwen3.5:9b
 
-python -m src.main --agent llm --render ascii --map maps/room_s.map --max-steps 30
+python -m src.main --render ascii --map maps/room_s.map --max-steps 30
 
 
 # Output:

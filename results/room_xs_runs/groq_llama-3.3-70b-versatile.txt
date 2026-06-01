@@ -4,7 +4,7 @@ export PROVIDER=groq
 export MODEL=llama-3.3-70b-versatile
 export API_KEY=YOUR_KEY
 
-python -m src.main --agent llm --render ascii --map maps/room_xs.map --max-steps 30
+python -m src.main --render ascii --map maps/room_xs.map --max-steps 30
 
 
 # Output:
