@@ -39,7 +39,9 @@ conda activate humanoid
 pip install -r requirements.txt
 ```
 
-Then set provider and model environment variables. For this project, I used Groq's llama-3.3-70b-versatile model for the final runs. To save token costs, I used Ollama's local qwen3.5:9b and qwen3.5:4b models for development and testing, which also performed well on the task. Results for both models can be found in the results folder.
+Then set provider and model environment variables. 
+
+For this project, I used Groq's llama-3.3-70b-versatile model for the final runs as groq allowed for very fast inference. To save token costs, I used Ollama's local qwen3.5:9b and qwen3.5:4b models for development and testing, which also performed well on the task. Results for both models can be found in the results folder.
 
 ### Groq (API)
 ```bash
