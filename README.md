@@ -75,16 +75,21 @@ python -m src.main --render pygame --map maps/room_s.map --max-steps 60
 ## Example Runs
 Demo recordings of pygame 2D world runs using the llama-3.3-70b-versatile model via groq can be found [here](https://drive.google.com/drive/folders/1bBEq9L27xcJ3dbpxMzgDkB5M00k15xmw?usp=sharing).
 
-Demo logs of ASCII runs using both ollama qwen models and the groq llama-3.3-70b-versatile model can be found in the results folder.
+Demo logs of ASCII runs using both ollama qwen models and the groq llama-3.3-70b-versatile model can be found in the [results folder](results).
 
 
 ## Limitations and Future Work
 On the baseline maps (room_xs.map and room_s.map), the agent completes the key-door task reliably with structured observations and constrained actions. On the maze map, results are less consistent. The model can fall into repeated behavior, such as moving up/down in loops or repeatedly trying directions that lead into walls, before it recovers. Longer maze runs are also more exposed to API rate limits, which can trigger fallback actions and reduce progress.
 
-This can be seen in the maze map run in results. To reproduce the maze run please use the following command:
+This can be seen in the results for the maze map run with llama [here](results/room_maze_runs/groq_llama-3.3-70b-versatile.txt). 
+
+To reproduce the maze run please use the following command:
 
 ```bash
+# With Ascii rendering
 python -m src.main --render ascii --map maps/room_maze.map --max-steps 30
+
+# With pygame 2D rendering
 python -m src.main --render pygame --map maps/room_maze.map --max-steps 30
 ```
 
