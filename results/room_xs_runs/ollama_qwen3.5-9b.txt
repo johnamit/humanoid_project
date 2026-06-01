@@ -1,0 +1,138 @@
+# CLI Commands:
+
+export PROVIDER=ollama
+export OLLAMA_MODEL=qwen3.5:9b
+
+python -m src.main --agent llm --render ascii --map maps/room_xs.map --max-steps 30
+
+
+# Output:
+
+Humanoid Internship Application Project
+Map: maps/room_xs.map
+Max steps: 30
+Provider: ollama
+Model: qwen3.5:9b
+
+##########
+#A...#...#
+#....D...#
+#....#...#
+#....#####
+#.K......#
+##########
+
+Step 1: {'action': 'move', 'direction': 'down'} -> Moved down. | fallback=False
+##########
+#....#...#
+#A...D...#
+#....#...#
+#....#####
+#.K......#
+##########
+
+Step 2: {'action': 'move', 'direction': 'down'} -> Moved down. | fallback=False
+##########
+#....#...#
+#....D...#
+#A...#...#
+#....#####
+#.K......#
+##########
+
+Step 3: {'action': 'move', 'direction': 'down'} -> Moved down. | fallback=False
+##########
+#....#...#
+#....D...#
+#....#...#
+#A...#####
+#.K......#
+##########
+
+Step 4: {'action': 'move', 'direction': 'down'} -> Moved down. | fallback=False
+##########
+#....#...#
+#....D...#
+#....#...#
+#....#####
+#AK......#
+##########
+
+Step 5: {'action': 'move', 'direction': 'right'} -> Moved right. | fallback=False
+##########
+#....#...#
+#....D...#
+#....#...#
+#....#####
+#.A......#
+##########
+
+Step 6: {'action': 'pick_up'} -> Picked up key. | fallback=False
+##########
+#....#...#
+#....D...#
+#....#...#
+#....#####
+#.A......#
+##########
+
+Step 7: {'action': 'move', 'direction': 'up'} -> Moved up. | fallback=False
+##########
+#....#...#
+#....D...#
+#....#...#
+#.A..#####
+#........#
+##########
+
+Step 8: {'action': 'move', 'direction': 'up'} -> Moved up. | fallback=False
+##########
+#....#...#
+#....D...#
+#.A..#...#
+#....#####
+#........#
+##########
+
+Step 9: {'action': 'move', 'direction': 'up'} -> Moved up. | fallback=False
+##########
+#....#...#
+#.A..D...#
+#....#...#
+#....#####
+#........#
+##########
+
+Step 10: {'action': 'move', 'direction': 'right'} -> Moved right. | fallback=False
+##########
+#....#...#
+#..A.D...#
+#....#...#
+#....#####
+#........#
+##########
+
+Step 11: {'action': 'move', 'direction': 'right'} -> Moved right. | fallback=False
+##########
+#....#...#
+#...AD...#
+#....#...#
+#....#####
+#........#
+##########
+
+Step 12: {'action': 'open_door'} -> Door opened. Mission complete. | fallback=False
+##########
+#....#...#
+#...AO...#
+#....#...#
+#....#####
+#........#
+##########
+
+Mission complete.
+Final State:
+Agent: Position(row=2, col=4)
+Has key: True
+Door open: True
+Mission complete: True
