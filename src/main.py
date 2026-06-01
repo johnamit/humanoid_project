@@ -5,8 +5,8 @@ from src.llm_client import get_provider_name, get_model_name
 def parse_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("--map", default="maps/room_s.map")
-    parser.add_argument("--render", choices=["none", "ascii", "pygame"], default="ascii")
-    parser.add_argument("--max-steps", type=int, default=60)
+    parser.add_argument("--render", choices=["none", "ascii", "pygame"], default="pygame")
+    parser.add_argument("--max-steps", type=int, default=30)
     return parser.parse_args()
 
 def run():

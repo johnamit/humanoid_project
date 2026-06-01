@@ -54,7 +54,7 @@ export PROVIDER=ollama
 export OLLAMA_MODEL=qwen3.5:9b
 ```
 
-Run the project with the default entrypoint.
+Run the project with the default arguments (map=maps/room_s.map, render=pygame, max-steps=30).
 
 ```bash
 python -m src.main
